@@ -3,11 +3,7 @@
 > A fully Earth-independent navigation system for interplanetary and interstellar spacecraft - think GNSS, but the "satellites" are millisecond pulsars, radio pulsars, and quasars.
 > 
 
-[](https://img.shields.io/badge/status-in%20development-blue)
-
-[](https://img.shields.io/badge/python-3.x-blue)
-
-[](https://img.shields.io/badge/license-MIT-green)
+[](https://img.shields.io/badge/status-in%20development-blue) [](https://img.shields.io/badge/python-3.x-blue) [](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
