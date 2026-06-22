@@ -56,4 +56,4 @@ Built for the Stardance Challenge by Hack Club, in partnership with NASA. Pulsar
 
 ## License
 
-MIT — [see LICENSE](https://mit-license.org).
+MIT - [see LICENSE](https://mit-license.org).
