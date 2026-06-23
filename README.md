@@ -1,4 +1,4 @@
-# ADSNS — Autonomous Deep Space Navigation Standard
+# ADSNS — Autonomous Deep Space Navigation System
 
 > A fully Earth-independent navigation system for interplanetary and interstellar spacecraft - think GNSS, but the "satellites" are millisecond pulsars, radio pulsars, and quasars.
 > 
