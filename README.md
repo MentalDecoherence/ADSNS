@@ -17,9 +17,9 @@ GPS works because Earth is surrounded by satellites broadcasting precise time si
 
 | Source | Function |
 | --- | --- |
-| **MSPs** (millisecond pulsars) | High-precision timing references — rotate with clock-like stability, used the way GNSS uses atomic clocks |
+| **MSPs** (millisecond pulsars) | High-precision timing references - rotate with clock-like stability, used the way GNSS uses atomic clocks |
 | **Pulsars** | Coarse spatial triangulation anchors |
-| **Quasars** | Fixed inertial frame calibration points — distant enough to act as a stable celestial reference frame |
+| **Quasars** | Fixed inertial frame calibration points - distant enough to act as a stable celestial reference frame |
 
 By measuring the **time-of-arrival (TOA)** of pulses from several of these sources and comparing them against a predicted model, a spacecraft can solve for its own position and velocity with no ground station required.
 
