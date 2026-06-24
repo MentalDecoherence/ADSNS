@@ -1,0 +1,429 @@
+{
+    "note": "This data packet is only an example of what it could look like, throughout the project it will get more improvements."
+}
+
+{
+    "schema": {
+        "name": "ADSNS",
+        "version": "1.0.0",
+        "checksum_algorithm": "CRC-32/MPEG-2",
+        "compression": "none | lz4 | zstd"
+    },
+
+    "packet": {
+        "packet_id": "PKT-2026-168-011-A3F7",
+        "sequence_number": "4821",
+        "packet_type": "NAV_SOLUTION | NAV_RAW | NAV_HEALTH | CMD_ACK | TELEMETRY",
+        "priority": "CRITICAL | HIGH | NOMINAL | LOW",
+        "version_flags": {
+            "major": 3,
+            "minor": 2,
+            "patch": 1,
+            "experimental": true
+        },
+        
+        "source": {
+            "spacecraft_id": "DSM-7",
+            "spacecraft_name": "Ingenuity",
+            "subsystem": "ADSNS-CORE-A",
+            "node_id": "0X3A7F",
+            "agency": "Enstropy",
+            "mission_id": "Ingenuity-2026"
+        },
+
+        "destination": {
+            "target": "DSN | SPACECRAFT | RELAY | BROADCAST",
+            "station_id": "DSS-43",
+            "relay_chain": ["RELAY-L2-001", "RELAY-HALO-B"]
+        },
+
+        "timestamps": {
+            "packet_creation_tcb": "2026-168T14:22:07.382916400Z",
+            "packet_creation_tai": "2026-168T14:22:44.382916400Z",
+            "packet_creation_utc": "2026-168T14:22:07.382916400Z",
+            "onboard_clock_ticks": 9823741927301,
+            "onboard_clock_epoch": "2020-001T00:00:00.000000000Z",
+            "clock_drift_rate_ns_per_day": 0.00312,
+            "leapseconds_applied": 37
+        },
+
+        "transmission": {
+            "uplink_freq_hz": null,
+            "downlink_freq_hz": 8425500000,
+            "data_rate_bps": 2000,
+            "encoding_scheme": "TURBO-1/6 | LDPC-7/8 | RS(255,223)",
+            "interleaver_depth": 8,
+            "signal_to_noise_db": 14.7
+        },
+
+        "integrity": {
+            "header_crc32": "0xA3F72D91",
+            "payload_crc32": "0x5C4E8B02",
+            "packet_hmac_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "sequence_integrity_check": true
+        },
+
+        "spacecraft_state": {
+            "comment": "Inertial state vector in ICRF (International Celestial Reference Frame), J2000.0 epoch",
+            "reference_frame": "ICRF",
+            "central_body": "SSB",
+            "epoch_tcb": "2026-168T14:22:07.38291500Z",
+
+            "position_km": {
+                "x": 3.827164928374610e+08,
+                "y": -1.293847162938471e+08,
+                "z": 4.109237461928374e+07,
+                "radial_distance_km": 4.073918273641029e+08
+            },
+            "velocity_km_s": {
+                "x_dot": 1.827364918273641,
+                "y_dot": -0.39182736918274,
+                "z_dot": 0.109273641928374,
+                "speed_km_s": 1.875192836419283
+            },
+            "acceleration_km_s2": {
+                "x_ddot": -2.918273641928374e-06,
+                "y_ddot": 1.102918273641928e-06,
+                "z_ddot": -3.827364918273641e-07
+            },
+            "covariance_matrix_6x6": {
+                "comment": "Position-velocity covariance [km^2, km^2/s, km^2/s^2] - upper triangular stored row-major",
+                "units": "km, km/s",
+                "values": [
+                    [1.2e+04,  3.1e+01,  -1.4e+01,  2.7e-02,  1.3e-03,  -4.1e-04],
+                    [0.0,      8.7e+03,   2.2e+01, -1.1e-02,  3.8e-02,   7.2e-04],
+                    [0.0,      0.0,       5.3e+03,  4.9e-03, -6.1e-03,   1.9e-02],
+                    [0.0,       0.0,       0.0,     3.2e-05,  1.4e-06,  -2.3e-07],
+                    [0.0,       0.0,       0.0,     0.0,      2.9e-05,   8.1e-07],
+                    [0.0,       0.0,       0.0,     0.0,      0.0,       1.7e-05]
+                ]
+            },
+
+            "attitude": {
+                "reference_frame": "ICRF_to_BODY",
+                "quaternion": {
+                    "w": 0.7071067811865476,
+                    "x": 0.0000000000000000,
+                    "y": 0.7071067811865475,
+                    "z": 0.0000000000000000,
+                    "norm_check": 1.0000000000000000,
+                    "norm_tolerance": 1.0e-09
+                },
+                "euler_angles_rad": {
+                    "roll": 0.0000000000,
+                    "pitch": 1.5707963268,
+                    "yaw": 0.0000000000,
+                    "sequence": "ZYX"
+                },
+                "angular_velocity_rad_s": {
+                    "omega_x": 2.71828e-05,
+                    "omega_y": -1.41421e-05,
+                    "omega_z": 3.14159e-06
+                },
+                "attitude_covariance_3x3": {
+                    "units": "rad^2",
+                    "values": [
+                        [1.4e-10,  0.0,      0.0    ],
+                        [0.0,      1.4e-10,  0.0    ],
+                        [0.0,      0.0,      1.4e-10]
+                    ]
+                }
+            }
+        },
+
+        "pulsar_observations": {
+            "comment": "Raw and reduced X-ray timing observations from onboard XNAV detector array",
+            "observation_epoch_tcb": "2026-168T14:22:07.382916400Z",
+            "detector_array_id": "XNAV-DET-B2",
+            "detector_effective_area_cm": 1200,
+            "detector_energy_band_kev": [0.5, 10.0],
+            "background_count_rate_ctc_s": 0.0087,
+            "observation_window_s": 3600,
+            "num_pulsars_observed": 4,
+
+            "pulsars": [
+                {
+                    "pulsar_id": "PSR-J0437-4715",
+                    "catalog_ref": "ATNF-PSR-J0437-4715",
+                    "adsns_catalog_id": "ADSNS-CAT-0001",
+                    "type": "MILLISECOND_PULSAR",
+                    "spin_period_s": 0.005757451936712637,
+                    "spin_period_derivative": -1.72636e-20,
+                    "dispersion_measure_pc_cm3": 26448,
+                    "astrometry": {
+                        "ra_j2000_rad": 1.215185778960129,
+                        "dec_j2000_rad": -0.826481682027413,
+                        "ra_proper_motion_rad_s":   -2.989e-16,
+                        "dec_proper_motion_rad_s":   3.551e-16,
+                        "parallax_mas": 6.396,
+                        "distance_kpc": 0.15636,
+                        "ref_epoch_tcb": "2000-001T11:58:55.816Z"
+                    },
+                    "binary_params": {
+                        "is_binary": true,
+                        "orbital_period_days": 5.7410459,
+                        "projected_semi_major_axis_lt_s": 3.3667144,
+                        "eccentricity": 0.00001944,
+                        "longitude_of_periastron_rad": 1.01523,
+                        "epoch_of_periastron_tcb": "2026-001T00:00:00.000Z"
+                    },
+                    "observation": {
+                        "observation_id": "OBS-J0437-20260617-001",
+                        "start_tcb": "2026-168T13:22:07.382916400Z",
+                        "end_tcb": "2026-168T14:22:07.382916400Z",
+                        "effective_exposure_s": 3601.0,
+                        "detected_photons": 4382,
+                        "pulsed_fraction": 0.2395,
+                        "signal_to_noise": 31.7,
+                        "phase_folded_profile": {
+                            "num_bins": 256,
+                            "bin_width_s": 2.249395287778374e-05,
+                            "counts": [
+                                112, 118, 109, 121, 134, 157, 183, 241, 389, 521,
+                                674, 802, 891, 912, 887, 831, 742, 631, 541, 412,
+                                311, 241, 198, 167, 143, 128, 119, 112, 109, 107,
+                                "... [226 additional bins ommited for brevity] ..."
+                            ],
+                            "template_profile_ref": "ADSNS-CAT-0001-TMPL-256BIN-v2"
+                        },
+                        "times_of_arrival": [
+                            {
+                                "toa_id": 1,
+                                "toa_tcb": "2026-168T13:22:37.29184732Z",
+                                "toa_uncertainty_ns": 0.412,
+                                "residual_ns": -0.031,
+                                "barycenter_corrected": true,
+                                "flags": "NOMINAL"
+                            }
+                        ],
+                        "phase_residual_rms_ns": 0.298,
+                        "quality_flag": "GOOD | MARGINAL | POOR | UNUSABLE",
+                        "exclusion_reason": null
+                    }
+                }
+            ]
+        },
+        "navigation_solution": {
+            "comment": "ADSNS filter output - absolute position derived from pulsar phase measurements",
+            "solution_id": "SOL-2026-168-001",
+            "solution_status": "VALID | DEGRADED | FAILED | INITIALIZING",
+            "filter_type": "EKD | UKF | PARTICLE | BATCH_LS",
+            "filter_version": "ADSNS-UKF-2.4.1",
+            "num_pulsars_used": 3,
+            "num_pulsars_excluded": 1,
+            "excluded pulsars": ["PSR-J0218+4232"],
+            "solution_epoch_tcb": "2026-168T14:22:07.382916400Z",
+            "time_since_last_dsn_update_s": 7200,
+            "time_since_filter_init_s": 86400,
+
+            "position_solution_km": {
+                "x": 3.827164928374610e+08,
+                "y": -1.293847162938471e+08,
+                "z": 4.109237461928374e+07,
+                "radial_distance_from_ssb_km": 4.073918273641029e+08
+            },
+            "position_uncertainty_1sigma_km": {
+                "x": 3.12,
+                "y": 3.87,
+                "z": 5.21,
+                "total_3d_rss_km": 7.83
+            },
+            "velocity_solution_km_s": {
+                "x_dot": 1.827364918273641,
+                "y_dot": -0.391827364918274,
+                "z_dot": 0.109273641928374
+            },
+            "velocity_uncertainty_1sigma_km_s": {
+                "x_dot": 0.00182,
+                "y_dot": 0.00174,
+                "z_dot": 0.00201
+            },
+
+            "clock_solution": {
+                "clock_offset_s":        2.91827364918274e-07,
+                "clock_offset_rate_s_s": 3.14159265358979e-13,
+                "clock_uncertainty_1sigma_s": 1.2e-10
+            },
+
+            "solution_covariance_7x7": {
+                "comment": "Full state covariance [x,y,z,vx,vy,vz,clk] - upper triangular row-major",
+                "units": "km, km/s, s",
+                "values": [
+                    [1.70e+01,  3.10e+00,  -1.40e+00,  2.70e-03,  1.30e-04,  -4.10e-05,  1.10e-09],
+                    [0.0,       1.50e+01,   2.20e+00, -1.10e-03,  3.80e-03,   7.20e-05, -3.20e-10],
+                    [0.0,       0.0,        2.71e+01,  4.90e-04, -6.10e-04,   1.90e-03,  5.40e-11],
+                    [0.0,       0.0,        0.0,       3.31e-06,  1.40e-07,  -2.30e-08,  7.10e-13],
+                    [0.0,       0.0,        0.0,       0.0,       3.03e-06,   8.10e-08,  4.20e-13],
+                    [0.0,       0.0,        0.0,       0.0,       0.0,        4.04e-06,  2.11e-13],
+                    [0.0,       0.0,        0.0,       0.0,       0.0,        0.0,       1.44e-20]
+                ]
+            },
+
+            "observability_matrix": {
+                "comment": "PDOP/GDOP analogs for pulsar geometry",
+                "pdop": 1.84,
+                "tdop": 0.92,
+                "gdop": 2.07,
+                "geometric_matrix_condition_number": 12.3
+            },
+
+            "innovations": {
+                "comment": "Filter innovation (measurement residual) vector per pulsar TOA",
+                "PSR-J0437-4715_ns": -0.031,
+                "PSR-J1939+2134_ns": 0.007,
+                "PSR-J0030+0451_ns": 0.104,
+                "normalized_innovation_squared": 2.71,
+                "chi2_dof": 3,
+                "chi2_p_value": 0.428,
+                "consistency_check": "PASSED | MARGINAL | FALIED"
+            }
+        },
+
+        "ancillary_navigation": {
+            "comment": "Supplementary nav inputs fused or available for fusion",
+
+            "dsn_radiometric": {
+                "available": true,
+                "last_update_tcb": "2026-168T12:20:07.0000000000Z",
+                "doppler_residual_hz": 0.00312,
+                "ranging_residual_m": 14.7,
+                "two_way_light_time_s": 2718.3,
+                "data_quality": "GOOD"
+            },
+
+            "optical_navigation": {
+                "available": true,
+                "target_body": "Jupiter",
+                "landmark_id": "JUP-I0-001",
+                "pixel_residual_arcsec": 0.0041,
+                "image_ref": "OPNAV-2026-168-047.fits",
+                "data_quality": "GOOD"
+            },
+
+            "star_tracker": {
+                "available": true,
+                "tracker_id": "ST-A",
+                "attitude_error_1sigma_arcsec": 2.1,
+                "num_stars_tracked": 12,
+                "data_quality": "NOMINAL"
+            },
+
+            "imu": {
+                "available": true,
+                "imu_id": "IMU-PRIMARY",
+                "integrated_delta_v_km_s": [0.000041, -0.000012, 0.000003],
+                "delta_v_uncertainty_km_s": 5.2e-07,
+                "integrated_delta_angle_rad": [1.2e-06, -3.4e-07, 9.1e-08],
+                "accumulated_drift_since_reset_s": 18432,
+                "gyro_bias_stability_deg_hr": 0.001
+            },
+
+            "ephemeris_corrections": {
+                "de440_residual_correction_applied": true,
+                "solar_pressure_model": "CANNONBALL | PANEL | N-PLATE",
+                "solar_pressure_cr": 1.32,
+                "spacecraft_area_m2": 22.4,
+                "spacecraft_mass_kg": 1247.3,
+                "gravity_harmonics_applied": false,
+                "relativistic_corrections": {
+                    "shapiro_delay_applied": true,
+                    "annual_abberation_applied": true,
+                    "frame_dragging_applied": false
+                }
+            }
+        },
+
+        "system_health": {
+            "comment": "ADSNS subsystem health and resource usage",
+            "timestamp_tcb": "2026-168T14:22:07.382916400Z",
+            "overall_health": "NOMINAL | DEGRADED | CRITICAL | SAFE_MODE",
+
+            "detector_array": {
+                "detector_id": "XNAV-DET-B2",
+                "status": "OPERATIONAL",
+                "temperature_k": 233.1,
+                "high_voltage_v": 1200,
+                "gain_factor": 1.042,
+                "dead_time_fraction": 0.00312,
+                "last_calibration_tcb": "2026-100T08:00:00:000Z",
+                "accumulated_dose_rad": 14823,
+                "anomaly_flags": []
+            },
+
+            "power": {
+                "bus_voltage_v": 28.1,
+                "adsns_power_draw_w": 34.7,
+                "detector_power_w": 18.2,
+                "processor_power_w": 12.3,
+                "thermal_power_w": 4.2,
+                "battery_state_of_charge_percent": 87.3
+            },
+
+            "thermal": {
+                "detector_focal_plane_k": 233.1,
+                "processor_k": 298.4,
+                "structure_k": 261.2
+            },
+
+            "filter_health": {
+                "filter_status": "CONVERGED | DIVERGING | INITIALIZING | SUSPENDED",
+                "itterations_to_convergence": 7,
+                "last_measurement_update_tcb": "2026-168T14:22:07.382916400Z",
+                "filter_reset_count": 0,
+                "covariance_condition_number": 4.21e+06,
+                "covariance_inflation_active": false,
+                "maneuver_in_progress": false,
+                "last_maneuver_tcb": "2026-150T09:14:00.000Z"
+            },
+
+            "fault_log": {
+                "active_faults": [],
+                "fault_history_last_24h": [
+                    {
+                        "fault_id": "FLT-2026-168-0001",
+                        "timestamp_tcb": "2026-168T02:17:44.000Z",
+                        "subsystem": "XNAV-DET-B2",
+                        "severity": "WARNING | MINOR | MAJOR | CRITICAL",
+                        "code": "DET_TEMP_HIGH",
+                        "description": "Detector temperature exceeded nominal upper limit by 2.1 K",
+                        "auto_corrected": true,
+                        "corrective_action": "HEATER_DUTY_CYCLE_REDUCED"
+                    }
+                ]
+            }
+        },
+
+        "mission_context": {
+            "mission_phase": "CRUISE | TCM | APPROACH | ENCOUNTER | ORBIT_INSERTION | SCIENCE",
+            "maneuver_schedule": {
+                "next_maneuver_id": "TCM-7",
+                "planned_tcb": "2026-175T16:00:00.000Z",
+                "delta_v_magnitude_m_s": 4.21,
+                "engine": "MAIN_THRUSTER_A"
+            },
+            "nav_mode": "ADSNS_AUTONOMOUS | ADSNS_AIDED | GROUND_IN_LOOP | SAFE",
+            "ground_override_active": false,
+            "last_ground_command_tcb": "2026-168T08:00:12.000Z",
+            "next_dsn_pass_tcb": "2026-169T00:00:00:.000Z",
+            "autonomy_level": {
+                "level": 3,
+                "description": "Full ADSNS autonomous navigation. Ground-in-loop for maneuver approval only."
+            },
+            "target_body": {
+                "name": "Saturn",
+                "naif_id": 699,
+                "distance_km": 4.073918273641029e+08,
+                "range_rate_km_s": -1.875192736419283
+            }
+        },
+
+        "packet_footer": {
+            "payload_length_bytes": 4096,
+            "padding_bytes": 0,
+            "packet_end_marker": "0xAA55AA55",
+            "footer_crc32": "0xD4C3B2A1",
+            "generation_software": "ADSNS-FSW-3.2.1-FLIGHT",
+            "build_hash": "sha256:a1b2c3d4e5f67890abcdef1234567890abcdef1234567890abcdef1234567890"
+        }
+    }
+}
