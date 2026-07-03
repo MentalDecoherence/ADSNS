@@ -35,8 +35,6 @@ where:
 - $TOA^i_{measured}$ — the observed time-of-arrival of pulses from source $i$
 - $TOA^i_{model}(x,t)$ — the predicted time-of-arrival, computed from the source's known ephemeris and the spacecraft's hypothesized state
 
-The model term accounts for light-travel time, the spacecraft's relative motion, and relativistic effects (time dilation, gravitational redshift) - which is why relativistic corrections live in their own dedicated module rather than being folded into the geometry code. Solving this minimization over time, rather than at a single instant, is what turns a one-shot fix into a continuous navigation filter.
-
 ## How it works (pipeline)
 
 1. **Detection** — raw photon/pulse events are captured (`detector/photon.py`).
