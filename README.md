@@ -7,7 +7,7 @@
 
 ---
 
-## Why this exists
+## Why this exists?
 
 GPS works because Earth is surrounded by satellites broadcasting precise time signals. The moment a spacecraft leaves that bubble - heading to Mars, the outer planets, or beyond - that infrastructure disappears. Current deep-space missions fall back on the **Deep Space Network**, a chain of ground antennas that triangulates a spacecraft's position from Earth. That works, but it's slow (light-time delay alone can be hours), bandwidth-limited, and entirely dependent on Earth being available and listening.
 
